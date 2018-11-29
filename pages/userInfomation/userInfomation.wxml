@@ -1,0 +1,41 @@
+<view class="userInfomation">
+   <view class="uerInfomation_box">
+      <view class="userInfomation_avatar">
+        <span>头像</span>
+        <view class="userInfomation_avatarright">
+            <image src="../../img/tixian.png" class="userinfo_imga"></image>
+            <image src="../../img/jiantou.png"></image>
+        </view>
+      </view>
+      <view class="userInfomation_avatar">
+        <span>昵称</span>
+        <view class="userInfomation_avatarright">
+            <em>酷酷的龙</em>
+            <image src="../../img/jiantou.png"></image>
+        </view>
+      </view>
+      <view class="userInfomation_avatar">
+        <span>个人签名</span>
+        <view class="userInfomation_avatarright">
+            <!-- <i>酷酷的龙</i> -->
+            <input type='text' bindinput = "senderPhone" name="input" placeholder="未绑定" value='{{ senderPhone }}'/>
+            <image src="../../img/jiantou.png"></image>
+        </view>
+      </view>
+      <view class="userInfomation_avatar">
+        <span>手机号码</span>
+        <view class="userInfomation_avatarright">
+            <i>未设置</i>
+            <image src="../../img/jiantou.png"></image>
+        </view>
+      </view>
+      <view class="userInfomation_avatar" style="border-bottom:none;">
+        <span>真实姓名</span>
+        <view class="userInfomation_avatarright">
+          <i>未设置</i>
+          <image src="../../img/jiantou.png"></image>
+        </view>
+      </view>
+   </view>
+   <button class="user_confirm">保存</button>
+</view>

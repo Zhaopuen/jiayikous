@@ -1,0 +1,102 @@
+<view class="container">
+  <view class="home">
+    <image src="../../img/homeBg.png" class="home-bg"></image>
+    <view class="home-content" wx:for="{{myInfoBox}}" wx:key="{{index}}">
+      <!--图标和姓名-->
+      <view class="home-content-top">
+        <image class="content-top-img" src="{{item.avatar}}"></image>
+        <view class="content-top-name">{{item.nickname}}</view>
+      </view>
+      <!--收益与余额-->
+      <view class="home-content-money">
+        <view class="content-money-left" bindtap='toGetMoney'>
+          <view class="money-left-sy">
+            ￥{{item.shouyi}}
+          </view>
+          <view class="money-left-title">
+            我的收益
+          </view>
+        </view>
+        <view class="content-money-right" bindtap='toBalance'>
+         <view class="money-right-sy">
+          ￥{{item.yue}}
+          </view>
+          <view class="money-right-title">
+            账户余额
+          </view>
+        </view>
+      </view>
+      <view class="home-content-order">
+        <!--个人信息-->
+      <navigator url="../user/user">
+        <view class="home-content-information">
+          <image class="content-information-icon" src="../../img/sz.png"></image>
+          <view class="content-information-title">个人信息</view>
+        </view>
+      </navigator>
+      
+
+      <!--我的订单-->
+        <view class="content-order-title">
+          我的订单
+        </view>
+        <view class="content-order-con">
+          <block class="order-con" wx:for="{{order}}" wx:key="{{index}}">
+            <navigator  open-type="navigate" hover-class="none" url = "{{ item.href }}">
+              <image class='order_img' src="{{item.img}}"></image>
+              <text>{{ item.title }}</text>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='blank_br'></view>
+  <view class='always_tools'>
+    <view class="tools_title">常用工具</view>
+    <view class='tools_content'>
+      <!-- <block class="tools-con" wx:for="{{tools}}" wx:key="{{index}}">
+        <navigator  open-type="navigate" hover-class="none" url = "{{ item.href }}">
+          <image class='order_img' src="{{item.img}}"></image>
+          <text>{{ item.title }}</text>
+        </navigator>
+      </block> -->
+      <block class="tools-con">
+        <navigator  open-type="navigate" hover-class="none" url = "../rewardPoints/rewardPoints">
+          <image class='order_img' src="../../img/jifen.png"></image>
+          <text>积分</text>
+        </navigator>
+      </block>
+      <block class="tools-con">
+        <navigator  open-type="navigate" hover-class="none" url = "../collectRecord/collectRecord">
+          <image class='order_img' src="../../img/shoucang.png"></image>
+          <text>收藏</text>
+        </navigator>
+      </block>
+      <block class="tools-con">
+        <navigator  open-type="navigate" hover-class="none" url = "../address/address">
+          <image class='order_img' src="../../img/dizhi.png"></image>
+          <text>收货地址</text>
+        </navigator>
+      </block>
+      <block class="tools-con">
+        <navigator  open-type="navigate" hover-class="none" url = "../userknow/userknow">
+          <image class='order_img' src="../../img/xuzhi.png"></image>
+          <text>用户须知</text>
+        </navigator>
+      </block>
+      <block class="tools-con">
+        <button class='tools_kf'  open-type="contact" session-from="weapp">
+          <image class='order_img' src="../../img/kefu3.png"></image>
+          <text>客服</text>
+        </button>
+      </block>
+      <block class="tools-con">
+        <navigator  open-type="navigate" hover-class="none" url = "../service/service">
+          <image class='order_img' src="../../img/shouhou.png"></image>
+          <text>售后</text>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>

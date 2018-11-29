@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="home">
+    <image src="../../img/homeBg.png" class="home-bg"></image>
+    <view class='rewardPoint'>
+      <text>￥{{ rewardPoint }}</text>
+      <text>账户余额</text>
+    </view>
+  </view>
+  <view class='moneyContent'>
+    <text>提现到微信账户</text>
+    <view class='moneyInput'>
+      <text>￥</text>
+      <input type='text' bindinput = "rechargeMoney" name="input" placeholder="最低一元起提" value='{{ rechargeMoney }}'/>
+    </view>
+    <view class='moneyTxt'>充值金额预计1分钟内到账</view>
+    <view class='rechargeFn' bindtap='rechargeFn'>支付</view>
+  </view>
+</view>

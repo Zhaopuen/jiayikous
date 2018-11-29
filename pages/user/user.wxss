@@ -1,0 +1,161 @@
+
+.container_bg{
+		width: 100%;
+		height: 100%;
+		background: #fafafa;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0;
+    position:fixed;
+	}
+	.sender{
+		width: 680rpx;
+		height: auto;
+		background: #fff;
+		margin-top: 30rpx;
+		
+	}
+	.senderName{
+		width: 100%;
+		height: 100rpx;
+		border-bottom: 1px solid #fafafa;
+	}
+	.senderName>text{
+		font-size: 0.8em;
+		line-height: 100rpx;
+		margin-left: 30rpx;
+	}
+  .senderName iamge{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius:50%; 
+  }
+	.senderName>view{
+		width: 400rpx;
+		height: 100%;
+		align-items: center;
+		display: flex;
+		font-size: 0.7em;
+		justify-content: flex-end;
+	}
+	.senderName>view input{
+		text-align: right;
+	}
+	.senderStaticDiv{
+		padding-right:30rpx; 
+		width: 100%;
+		height: 100rpx;
+		border-bottom: 1px solid #fafafa;
+		align-items: center;
+	}
+	.senderStaticDiv>text{
+		font-size: 0.8em;
+		line-height: 100rpx;
+		margin-left: 30rpx;
+	}
+	.senderStaticDiv>input{
+		text-align: right;
+		font-size: 0.8em;
+		margin-right: 30rpx; 
+		width: 400rpx;
+	}
+	.senderStaticDiv picker{
+		width: 400rpx;
+		height: 100rpx;
+		margin-top: 0; 
+		margin-right:30rpx; 
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+    font-size: 0.8em;
+	}
+	.detailAdd{
+		width: 620rpx;
+		height: 150rpx;
+		margin: 0rpx auto;
+		background: #fafafa;
+		font-size: 0.7em;
+	}
+	.detailAdd textarea{
+		width: 100%;
+		height: 100%;
+		padding:20rpx 0 0 10rpx;
+		white-space: wrap;
+	}
+	.difCopy{
+		width: 680rpx;
+		height: 400rpx;
+		margin: 20rpx auto;
+		border-bottom: 1px solid #fafafa;
+	}
+	.difCopy p{
+		color: #2e71b7;
+		margin-bottom: 30rpx;
+		font-size: 0.8em;
+		margin-left: 30rpx; 
+	}
+	.difCopy textarea{
+		width: 620rpx;
+		height: 300rpx;
+		background: #fafafa;
+		margin: 0 auto;
+		font-size: 0.8em
+	}
+	.createCamera img{
+		width: 20rpx;
+		height: 35rpx;
+		margin-right: 30rpx;
+	}
+	.saveAdd span{
+		color: #2e71b7;
+	}
+	.txtDelete{
+		width: 680rpx;
+		height: 50rpx;
+		text-align: center;
+		font-size: 0.6em;
+		color: #8b8b8b;
+		margin: 30rpx 0;
+	}
+	.senderSubmit{
+		width: 680rpx;
+		height: 100rpx;
+		background: #2e71b7;
+		color: #fff;
+		line-height: 100rpx;
+		text-align: center;
+		margin-bottom: 30rpx; 
+		border-radius: 13rpx;
+	}
+	.borderNone{
+		border-bottom:none;
+	}
+  /*新增地址按钮*/
+.address_btn{
+	position: fixed;
+	width:92%;
+	bottom: 0rpx;
+	background-color:#fff;
+	padding-bottom:30rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.address_btn button{
+	line-height:80rpx;
+	font-size: 0.8em;
+	border-radius: 10rpx;
+  background: #81D8CF;
+  color: #fff;
+}
+.content-top-img{
+  width:70rpx;
+  height:70rpx;
+  border-radius:50%;
+  margin-right:30rpx;
+}
+.content-top-name{
+  margin-right:30rpx;
+  font-size:32rpx;
+}

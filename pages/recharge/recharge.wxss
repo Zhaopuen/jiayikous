@@ -1,0 +1,87 @@
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.home{
+    width: 100%;
+    height: 450rpx;
+    overflow: hidden;
+    position: relative;
+}
+.home-bg{
+    width: 100%;
+    height: 350rpx;
+    display: block;
+}
+/* 积分 */
+.rewardPoint{
+  width: 100%;
+  height: 300rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.rewardPoint text{
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  color:#fff;
+}
+.rewardPoint text:nth-child(1){
+  font-size: 1.6em;
+  line-height: 150rpx;
+}
+.rewardPoint text:nth-child(2){
+  font-size: 0.8em;
+  line-height: 50rpx;
+}
+
+.moneyContent{
+  width: 100%;
+  height: auto;
+  margin-top: -170rpx;
+  z-index: 999;
+}
+.moneyContent>text{
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 0.9em;
+  margin-bottom: 80rpx;
+}
+.moneyInput{
+  width: 84;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+}
+.moneyInput>text{
+  font-size: 1.2em;
+  margin-right: 20rpx;
+}
+.moneyTxt{
+  width: 82%;
+  padding: 0 9%;
+  font-size: 0.7em;
+  color: #666;
+  margin-top: 20rpx;
+}
+.rechargeFn{
+  width: 70%;
+  margin: 0 15%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background: #83D9D0;
+  border-radius: 50rpx;
+  color: #fff;
+  margin-top: 100rpx;
+}
+.record{
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  color: #83D9D0;
+  margin-top: 20rpx;
+}

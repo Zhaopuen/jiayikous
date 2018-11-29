@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="container_bg">
+		<view class="sender">
+			<view class="senderName flex_bt">
+				<text>姓名</text>
+				<view>
+           <input type='text' bindinput = "senderName" name="input" placeholder="请在此处输入姓名" value='{{ senderName }}'/>
+				</view>
+			</view>
+			<view class="senderStaticDiv flex_bt">
+				<text>手机号码</text>
+        <input type='text' bindinput = "senderPhone" name="input" placeholder="请在此处输入您的手机号" value='{{ senderPhone }}' bindblur="btnclick" maxlength='11'/>
+			</view>
+      <view class='line_item item_one senderStaticDiv flex_bt' bindtap='accountSet'>
+        <text class='_left'>所在省市区</text>
+        <view class='_right _right_rt '>
+            <picker mode="multiSelector" bindtap="regionFocus"
+                    bindcancel = 'regionCancel'
+                    bindchange="regionPickerChange" bindcolumnchange="regionPickerColumnChange" value="{{regionIndex}}" range="{{regionArray}}">
+                <view class="picker">
+                    {{regionArray[0][regionIndex[0]]}}
+                    {{regionArray[1][regionIndex[1]]}}
+                    {{regionArray[2][regionIndex[2]]}}
+                </view>
+            </picker>
+
+        </view>
+    </view>
+			<view class="senderStaticDiv borderNone">
+				<text>详细地址</text>
+				<text></text>	
+			</view>
+			<view class="detailAdd">
+				<textarea value='{{ detailAdd}}' placeholder="请在此处输入您的详细地址" bindinput="addressinput"></textarea>
+			</view>
+		</view>
+	</view>
+  <view class="address_btn">
+    <button class="btn_color" bindtap="addbtnClick">添加</button>
+  </view>
+</view>

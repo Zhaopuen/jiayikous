@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container indexmall">
+  <!-- 搜索框 -->
+    <view class='index_search' bindtap='tosearch'>
+       <input type='text' name="input"  bindinput = "inputPassword" password="{{ password }}" focus="{{ focus }}" placeholder="在万千藏品中搜素" value='{{ search }}'/>
+       <image src='../../img/search.png'></image>
+    </view>
+    <!-- 新增需求 -->
+    <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">明</view>
+      <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">后</view>
+      <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">{{ day }}</view>
+      </view>
+    <!-- 商品列表 -->
+    <view class="mall_listbox">
+      <view class="mall_list" wx:for="{{ goods_list }}" wx:key="{{ index }}">
+        <image src="https://jingpai.fengsh.cn{{item.src}}" class="mall_list_mallimg">
+          <view class="mall_list_title">{{ item.title }}</view>
+          <view class="mall_collection" data-id="{{ item.id }}" bindtap='collectionClick'>
+             <image src="../../img/shoucang2.png"></image>
+          </view>
+        </image>
+        
+        <view class='bidMoney'>
+          <view>
+            <text>起</text>
+            <text>起购价:</text>
+            <text style='color:#F30B00'>￥{{ item.basicMoney }}</text>
+          </view>
+          <view>
+            <text>加</text>
+            <text>加一口:</text>
+            <text>￥{{ item.addMoney }}</text>
+          </view>
+          <view>
+            <text>定</text>
+            <text>市场价:</text>
+            <text>￥{{ item.marketMoney }}</text>
+          </view>
+          <view>
+            <text>奖</text>
+            <text>分佣金:</text>
+            <text>￥{{ item.brokerageMoney }}</text>
+          </view>
+        </view>
+        <view class="daojishi">
+           <image src="../../img/shijian.png"></image>
+           <text>{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  

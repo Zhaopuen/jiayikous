@@ -1,0 +1,86 @@
+@import '../../weui.wxss';
+.container{
+  width: 100%;
+  height: auto;
+}
+.addressBook{
+  width: 100%;
+	min-height: 500px;
+	background-color: #f8f8f8;
+}
+/* .radio>span{
+	position: absolute;
+	width:140rpx;
+	top:5rpx;
+}
+.radio-group{
+	position: relative;
+	display: inline-flex;
+	align-items:center;
+} */
+.book_content{
+	padding-bottom: 140rpx;
+}
+.book_text{
+  width: 88%;
+  height: auto;
+  background: #fff;
+  margin: 10rpx auto;
+  padding: 20rpx;
+}
+.book_text>view{
+	height:70rpx;
+	line-height: 70rpx;
+}
+.text_user{
+	font-size: 0.9em;
+}
+.text_address{
+	padding-bottom: 10rpx;
+	font-size: 0.7em;
+	color:#444;
+}
+.text_methed{
+	padding-top:20rpx;
+	font-size: 0.8em;
+}
+
+.text_btn{
+	width:290rpx;
+}
+.text_btn view{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+	margin-left: 20rpx;
+}
+.text_btn image{
+	width: 40rpx;
+	height:40rpx;
+	/*background-color: red;*/
+}
+.text_btn text{
+	display: inline-block;
+	line-height:70rpx;
+	margin-left:15rpx;
+}
+
+
+/*新增地址按钮*/
+.address_btn{
+	position: fixed;
+	width:92%;
+	bottom: 0rpx;
+	background-color:#fff;
+	padding-bottom:30rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.address_btn button{
+	line-height:80rpx;
+	font-size: 0.8em;
+	border-radius: 10rpx;
+  background: #81D8CF;
+  color: #fff;
+}

@@ -1,0 +1,70 @@
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.bidding_record{
+  height:100%;
+  background:#f5f5f5;
+  position:fixed;
+}
+
+/* 列表 */
+.rewardContent{
+  width: 94%;
+  height: auto;
+  margin: 3%;
+  z-index: 999;
+  border-radius:10rpx;
+  background: #fff;
+}
+.rewardList{
+  padding: 20rpx;
+  align-items: center;
+  border-bottom:2px solid #FBFBFB;
+}
+.rewardLeft{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.rewardLeft image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx; 
+  border-radius:50%;
+}
+.rewardTitle{
+  display: flex;
+  flex-direction: column;
+}
+.rewardTitle text:nth-child(1){
+  font-size: 0.8em;
+  color:#C7C7C7;
+  line-height: 60rpx;
+} 
+.rewardTitle text:nth-child(2){
+  font-size: 0.7em;
+  color: #C7C7C7;
+}
+.reword_middle text:nth-child(1){
+  font-size:0.8em;
+  color:#c7c7c7;
+  display: block;
+  text-align: center;
+}
+.reword_middle text:nth-child(2){
+  font-size:0.7em;
+  color:#81D8CF;
+}
+/* 账单记录 */
+.blank{
+  width: 94%;
+  padding: 0 3%;
+  height: 100rpx;
+  background: #FAFAFA;
+  line-height: 100rpx;
+  text-align: left;
+}
+

@@ -1,0 +1,102 @@
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.home{
+    width: 100%;
+    height: 450rpx;
+    overflow: hidden;
+    position: relative;
+}
+.home-bg{
+    width: 100%;
+    height: 400rpx;
+    display: block;
+}
+/* 积分 */
+.rewardPoint{
+  width: 100%;
+  height: 300rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.rewardPoint text{
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  color:#fff;
+}
+.rewardPoint text:nth-child(1){
+  font-size: 1.6em;
+  line-height: 150rpx;
+}
+.rewardPoint text:nth-child(2){
+  font-size: 0.8em;
+  line-height: 50rpx;
+}
+/* 充值和提现 */
+.cash{
+  position: absolute;
+  left: 0;
+  top: 330rpx;
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cash navigator{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9em;
+}
+.cash navigator image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 15rpx; 
+}
+
+/* 列表 */
+.rewardContent{
+  width: 100%;
+  height: auto;
+  margin-top: 0rpx;
+  z-index: 999;
+}
+.rewardList{
+  padding: 20rpx;
+  align-items: center;
+}
+.rewardLeft{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.rewardLeft image{
+  width: 70rpx;
+  height: 70rpx;
+   margin-right: 20rpx; 
+}
+.rewardTitle{
+  display: flex;
+  flex-direction: column;
+}
+.rewardTitle text:nth-child(1){
+  font-size: 0.9em;
+}
+.rewardTitle text:nth-child(2){
+  font-size: 0.8em;
+  color: #9B9B9B;
+}
+/* 账单记录 */
+.blank{
+  width: 94%;
+  padding: 0 3%;
+  height: 100rpx;
+  background: #FAFAFA;
+  line-height: 100rpx;
+  text-align: left;
+}

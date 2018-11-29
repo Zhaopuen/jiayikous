@@ -1,0 +1,165 @@
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.home{
+    width: 100%;
+    height: 640rpx;
+    overflow: hidden;
+    position: relative;
+}
+.home-bg{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*我的*/
+.home-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*图标和姓名*/
+.home-content-top{
+    width: 100%;
+    height: 250rpx;
+}
+.content-top-img{
+    width: 127rpx;
+    height: 127rpx;
+    text-align: center;
+    margin:30rpx auto 28rpx;
+    border-radius: 50%;
+    display: block;
+}
+.content-top-name{
+    font-size: 40rpx;
+    color: #fff;
+    text-align: center;
+}
+/*收益与余额*/
+.home-content-money{
+    margin: 0 26rpx;
+    overflow: hidden;
+}
+.content-money-left, .content-money-right{
+    width: 50%;
+    height: 148rpx;
+    text-align: center;
+    color: #fff;
+}
+.content-money-left{
+    float: left;
+}
+.content-money-right{
+    float: right;
+}
+.money-left-sy, .money-right-sy{
+    font-size: 34rpx;
+    margin: 30rpx auto 22rpx;
+    font-weight: 600;
+}
+.money-left-title, .money-right-title{
+    font-size: 26rpx;
+}
+/*个人信息*/
+.home-content-information{
+    position: absolute;
+    width: 185rpx;
+    height: 60rpx;
+    background: #e6f7f5;
+    top: 83rpx;
+    right: 0;
+    overflow: hidden;
+    border-top-left-radius: 30rpx;
+    border-bottom-left-radius: 30rpx;
+    line-height: 60rpx;
+}
+.content-information-icon{
+    width: 27rpx;
+    height: 27rpx;
+    margin-top: 17rpx;
+    margin-left: 22rpx;
+    margin-right: 11rpx;
+    display: block;
+    float: left;
+}
+.content-information-title{
+    font-size: 24rpx;
+    color: #81d8cf;
+}
+/* 我的订单 */
+.content-order-title{
+  margin-left: 30rpx;
+  font-size: 0.9em;
+  margin-bottom: 30rpx;
+}
+.content-order-con{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.content-order-con navigator{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+}
+.order_img{
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 10rpx;
+}
+/* 分割线 */
+.blank_br{
+  width: 100%;
+  height: 30rpx;
+  background: #FAFAFA;
+}
+/* 常用工具 */
+.always_tools{
+  width: 100%;
+  height: 350rpx;
+}
+.tools_title{
+  width: 100%;
+  margin-left: 30rpx;
+  font-size: 0.9em;
+  margin-bottom: 10rpx;
+}
+.tools_content{
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* .tools-con{
+  width: 25%;
+} */
+.tools_content navigator{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.75em;
+  width: 25%;
+}
+.tools_content button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.75em;
+  width: 25%;
+  margin: 0;
+  background: #fff;
+}
+.tools_kf:after{border: none;}

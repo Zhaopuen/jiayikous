@@ -1,0 +1,86 @@
+<!--index.wxml-->
+<view class="container indexmall">
+  <!-- 搜索框 -->
+    <view class='index_search' bindtap='tosearch'>
+       <input type='text' name="input"  bindinput = "inputPassword" password="{{ password }}" focus="{{ focus }}" placeholder="在万千藏品中搜素" value='{{ search }}'/>
+       <image src='../../img/search.png'></image>
+    </view>
+    <!-- 轮播 -->
+    <view class='banner_list'>
+      <swiper autoplay="true" circular="true" class="banner" duration="300" indicatorDots="true" interval="5000">
+        <swiper-item wx:for="{{lunbo}}" wx:key="{{index}}">
+          <navigator url="../sortList/sortList?id={{item.id}}">
+              <image class="slide-image" mode="aspectFill" src="{{item.pic_url}}"></image>
+            </navigator>
+          </swiper-item>
+        </swiper>
+    </view>
+    <!-- 竞购预展规则 -->
+    <view class='index_abs'>
+      <view class='abs_tab'>
+        <navigator open-type="navigate" hover-class="none" url = "../scrambleBuy/scrambleBuy">
+          <image class="abs_img" mode="aspectFill" src="../../img/jingou.png"></image>
+          <text>竞购</text>
+        </navigator>
+        <navigator open-type="navigate" hover-class="none" url = "../preview/preview">
+          <image class="abs_img" mode="aspectFill" src="../../img/yuzhan.png"></image>
+          <text>预展</text>
+        </navigator>
+        <navigator open-type="navigate" hover-class="none" url = "../rule/rule">
+          <image class="abs_img" mode="aspectFill" src="../../img/guize.png"></image>
+          <text>规则</text>
+        </navigator>
+      </view>
+    </view>
+    <!-- 商品列表 -->
+    <view class="mall_listbox">
+      
+        <view class="mall_list" wx:for="{{ goods_list }}" wx:key="{{ index }}">
+          <navigator url="../bidding/bidding?id={{item.id}}" open-type="navigate" hover-class="none">
+            <image src="https://jingpai.fengsh.cn{{item.src}}" class="mall_list_mallimg">
+              <view class="mall_list_title">{{ item.title }}</view>
+              <image src="../../img/jinpaizhong.png" class="mall_list_jingpaiimg">
+                <view class="mall_list_jingpai">竞购中</view>
+              </image>
+            </image>
+            
+            <view class='bidMoney'>
+              <view>
+                <text>起</text>
+                <text>起购价:</text>
+                <text style='color:#F30B00'>￥{{ item.basicMoney }}</text>
+              </view>
+              <view>
+                <text>加</text>
+                <text>加一口：</text>
+                <text>￥{{ item.addMoney }}</text>
+              </view>
+              <view>
+                <text>定</text>
+                <text>市场价:</text>
+                <text>￥{{ item.marketMoney }}</text>
+              </view>
+              <view>
+                <text>奖</text>
+                <text>分佣金:</text>
+                <text>￥{{ item.brokerageMoney }}</text>
+              </view>
+            </view>
+            <view class="daojishi">
+              <image src="../../img/shijian.png"></image>
+              <text>距结束：{{ item.time }}</text>
+            </view>
+            </navigator>
+          </view>
+      </view>
+    
+    <!-- <view class="mall_mask">
+       <view class="mall_maskbox">
+          <view class="mall_masktitle">产品详情</view>
+          <view class="mall_maskcontent">
+               <text>商品的名称</text>
+          </view>
+       </view>
+    </view> -->
+  </view>
+  

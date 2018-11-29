@@ -1,0 +1,118 @@
+<view class='suggest'>
+    <view class="swiper-tab">
+      <!-- <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">全部</view> -->
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">已成交</view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">未成交</view>
+      <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">待付款</view>
+      <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">待发货</view>
+      <view class="swiper-tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="clickTab">待收货</view>
+  </view>
+  
+  <swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" style="min-height:1209rpx;">
+      <!-- 全部订单 -->
+      <!-- <swiper-item class="order_manangerBox">
+        <view wx:for="{{orderListqb}}" class="order_managebox" wx:key="{{ index }}">
+          <view class="order_manage">
+              <image src="{{item.img}}" class="order_imgs"></image>
+              <view class="order_title">
+                  <view>{{item.title}}</view>
+                  <p>{{item.content}}</p>
+              </view>
+          </view>
+          <view class="order_payif">
+            <view class="order_paieds"><image src="../../img/dingdanyiwancheng.png"></image>已成交</view>
+            <view class="order_finished">您的订单已完成</view>
+          </view>
+        </view>
+      </swiper-item> -->
+      <!-- 已成交订单 -->
+      <swiper-item class="order_manangerBox">
+        <view wx:for="{{getDataycj}}" class="order_managebox" wx:key="{{ index }}">
+          <view class="order_manage">
+              <image src="{{item.img}}" class="order_imgs"></image>
+              <view class="order_title">
+                  <view>{{item.title}}</view>
+                  <p>{{item.content}}</p>
+              </view>
+          </view>
+          <view class="order_payif">
+            <view class="order_paieds">
+              <image src="../../img/dingdanyiwancheng.png" class="order_paidesimage" ></image>
+              已成交
+            </view>
+            <view class="order_finished">您的订单已完成</view>
+          </view>
+        </view>
+      </swiper-item>
+      <!-- 未成交的订单 -->
+      <swiper-item class="order_manangerBox">
+        <view wx:for="{{getDatawcj}}" class="order_managebox" wx:key="{{ index }}">
+          <view class="order_manage">
+              <image src="{{item.img}}" class="order_imgs"></image>
+              <view class="order_title">
+                  <view>{{item.title}}</view>
+                  <p>{{item.content}}</p>
+              </view>
+          </view>
+          <view class="order_payif">
+            <view class="order_paieds"><image src="../../img/dingdanweichengjiao.png"></image>未成交</view>
+            <view class="order_finished">您的订单已完成</view>
+          </view>
+        </view>
+      </swiper-item>
+      <!-- 待付款的订单 -->
+      <swiper-item class="order_manangerBox">
+        <view wx:for="{{getDatadfk}}" class="order_managebox" wx:key="{{ index }}">
+          <view class="order_manage">
+              <image src="{{item.img}}" class="order_imgs"></image>
+              <view class="order_title">
+                  <view>{{item.title}}</view>
+                  <p>{{item.content}}</p>
+              </view>
+          </view>
+          <view class="order_payif">
+            <view class="order_paieds"><image src="../../img/dingdandaigukuan.png"></image>待付款</view>
+            <view class="order_finished">
+              <navigator url="../pay/pay?id={{ item.id }}">
+                <button>支付</button>
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <!-- 待发货的订单 -->
+      <swiper-item class="order_manangerBox">
+        <view wx:for="{{getDatadfh}}" class="order_managebox" wx:key="{{ index }}">
+          <view class="order_manage">
+              <image src="{{item.img}}" class="order_imgs"></image>
+              <view class="order_title">
+                  <view>{{item.title}}</view>
+                  <p>{{item.content}}</p>
+              </view>
+          </view>
+          <view class="order_payif">
+            <view class="order_paieds"><image src="../../img/dingdandaifahuo.png"></image>待发货</view>
+            <view class="order_finished">您的订单正在打包中</view>
+          </view>
+        </view>
+      </swiper-item>
+      <!-- 待收货的订单 -->
+      <swiper-item class="order_manangerBox">
+        <view wx:for="{{getDatadsh}}" class="order_managebox" wx:key="{{ index }}">
+          <view class="order_manage">
+              <image src="{{item.img}}" class="order_imgs"></image>
+              <view class="order_title">
+                  <view>{{item.title}}</view>
+                  <p>{{item.content}}</p>
+              </view>
+          </view>
+          <view class="order_payif">
+            <view class="order_paieds" data-type="{{ item.id }}" bindtap='getGoodsTrue'><image src="../../img/dingdandaishouhuo.png"></image>确认收货</view>
+            <view class="order_finished">
+              <text>{{ item.courier }}</text>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+  </swiper>
+</view>

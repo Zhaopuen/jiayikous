@@ -1,0 +1,114 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+  <view class='bidHeader flex_bt'>
+    <text>————</text>
+    <view class='bidHeader_txt flex_bt'>
+      <text>距结束：</text>
+      <text>{{ timess }}</text>
+    </view>
+    <text>————</text>
+  </view>
+<!-- 商品列表 -->
+    <view class="mall_listbox">
+        <view class="mall_list" wx:for="{{ goods_list }}" wx:key="{{ index }}" bindtap='productClick' data-id="{{item.id}}">
+            <image src="https://jingpai.fengsh.cn{{item.src}}" class="mall_list_mallimg">
+              <view class="mall_list_title">{{ item.title }}</view>
+              <image src="../../img/jinpaizhong.png" class="mall_list_jingpaiimg">
+                <view class="mall_list_jingpai">{{ pay_title }}</view>
+              </image>
+            </image>
+            
+            <view class='bidMoney'>
+              <view>
+                <text>起</text>
+                <text>起购价:</text>
+                <text style='color:#F30B00'>￥{{ item.basicMoney }}</text>
+              </view>
+              <view>
+                <text>加</text>
+                <text>加一口：</text>
+                <text>￥{{ item.addMoney }}</text>
+              </view>
+              <view>
+                <text>定</text>
+                <text>市场价:</text>
+                <text>￥{{ item.marketMoney }}</text>
+              </view>
+              <view>
+                <text>奖</text>
+                <text>分佣金:</text>
+                <text>￥{{ item.brokerageMoney }}</text>
+              </view>
+            </view>
+          </view>
+      </view>
+  <view class='bidList'>
+    <view class='bidList_top'>
+      <text>序号</text>
+      <text>当前领先</text>
+      <text>当前价格</text>
+      <text>-------</text>
+    </view>
+    <view class='bidList_list flex_bt' wx:for="{{list}}" wx:key="{{ index }}">
+      <view class='bidList_left flex_bt' data-id="{{ item.id }}" bindtap='toBidingRecord'>
+        <view class='bidList_Img'>
+          <image src='../../img/xuhao.png'></image>
+          <text>{{ index + 1 }}</text>
+        </view>
+        <view class="bidList_info">
+          <image src='{{ item.avatar }}'></image>
+          <text>{{ item.name }}{{ item.startName }}</text>
+        </view>
+        <text class='bidListMoney'>￥{{ item.money }}{{ item.price_start }}</text>
+      </view>
+      <view class='bidList_right'  data-id="{{ item.id }}" style='background:{{ over_add }}'  bindtap='jiaclick'>加一口</view>
+      
+    </view>
+  </view>
+  <!-- 加一口弹窗 -->
+  <view class="bidListmask" wx:if="{{baby}}" animation="{{animationData}}">    
+      <view class="bidListmaskmid">
+        <view class="bidListclose" bindtap='jiaclickClose'>
+          <image src="../../img/close.png"></image>
+        </view>
+        <view class="bidListtutle">宝贝很抢手，请立即出价 <span>{{time}}</span>
+        </view>
+        <view class="bidListling">
+          <span>领先价：</span>
+          <text>{{ firstPrice }}</text>
+        </view>
+        <view class="bidListborder">
+           <text>￥{{ secondPrice }}</text>
+           <text>领先价+{{ thirdPrice }}元</text>
+        </view>
+        <view class="bidListButton" bindtap='bidListButton'>
+           <button>确认支付</button>
+        </view>
+        <view class="bidListagree">
+           <text>出价即表示同意<text style='color:#81D8CF'>《加一口服务协议》</text></text>
+        </view>
+      </view>  
+  </view>
+  <!-- 产品详情弹窗 -->
+  <view class="product_detail" wx:if="{{productDetail}}">
+    <view class="product_detailbox">
+      <view class="product_detailTitle">产品详情</view>
+      <view class="product_close" bindtap="productCloseClick">
+        <image src="../../img/close.png"></image>
+      </view>
+      <view>
+        <view class="product_detailcontent">
+          <text class="product_detailctitle">{{prodectListInfo}}</text>
+        </view>
+        <!-- <view class="product_content">
+          <text>颜色：银色</text>
+          <text>电源：智能芯额400w</text>
+        </view> -->
+        <view class="product_contentbox">
+          <!-- <text>{{productListC}}</text> -->
+          <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

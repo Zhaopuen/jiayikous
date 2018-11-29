@@ -1,0 +1,39 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="pay">
+  <view bindtap='toaddress'>
+      <view class="pay_address">
+        <image src="../../img/dizhi.png" class="pay_dizhiimg"></image>
+        <view class="pay_addressname">
+          <p class="{{ lineheight }}">{{ senderName }}</p>
+          <em wx:if="{{ senderAdd }}">{{ senderAdd }}</em>
+        </view>
+        <image src="../../img/jiantou.png" class="pay_jiantouimg"></image>
+      </view>
+  </view>
+    
+    <view class="pay_addressmall">
+      <view class="pay_address_mallbox">
+          <image src="https://jingpai.fengsh.cn{{ goodsImg }}"></image>
+          <view class="pay_address_malltitle">
+            <span>{{ goodsTitle }}</span>
+            <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+          </view>
+      </view>
+      <view class="pay_pricebox">
+        <span>物品价格</span>
+        <em>￥{{ priceOne }}</em>
+      </view>
+      <view class="pay_pricebox">
+        <span>已付定金</span>
+        <em>￥{{ priceTwo }}</em>
+      </view>
+      <view class="pay_pricebox">
+        <span>实付金额</span>
+        <em style="color:#E73330">￥{{ priceThree }}</em>
+      </view>
+      <view class="pay_pricebox" style='display:flex;align-items:center;'>
+        <textarea type='text' bindinput = "notes"  placeholder="商品为加油卡则只填卡号，必须是主卡号，副卡不能充值" value="{{notes}}"></textarea>
+      </view>
+    </view>
+    <view class="pay_paybutton" bindtap='payFn'><button>确认支付</button></view>
+</view>

@@ -1,0 +1,69 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/sort/sort",
+    "pages/preview/preview",
+    "pages/rule/rule",
+    "pages/scrambleBuy/scrambleBuy",
+    "pages/home/home",
+    "pages/login/login",
+    "pages/address/address",
+    "pages/addAddress/addAddress",
+    "pages/changeAddress/changeAddress",
+    "pages/rewardPoints/rewardPoints",
+    "pages/recharge/recharge",
+    "pages/withdrawCash/withdrawCash",
+    "pages/collectRecord/collectRecord",
+    "pages/user/user",
+    "pages/getMoney/getMoney",
+    "pages/balance/balance",
+    "pages/bidding/bidding",
+    "pages/pay/pay",
+    "pages/userInfomation/userInfomation",
+    "pages/orderGoods/orderGoods",
+    "pages/biddingRecord/biddingRecord",
+    "pages/userknow/userknow",
+    "pages/service/service",
+    "pages/sortList/sortList",
+    "pages/zfaddress/zfaddress",
+    "pages/rechargeRecord/rechargeRecord",
+    "pages/rulerz/rulerz"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#81D8CF",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh": true,
+    "backgroundStyle": "#1A0E40"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "color": "#000000",
+        "iconPath": "img/shouyeweixuanzhog.png",
+        "selectedIconPath": "img/shouye.png",
+        "selectedColor":"#fff"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "text": "分类",
+        "color": "#000000",
+        "iconPath": "img/fenlei.png",
+        "selectedIconPath": "img/fenleixuanzhong.png",
+        "selectedColor": "#fff"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "color": "#000000",
+        "iconPath": "img/wode.png",
+        "selectedIconPath": "img/wodexuanzhong.png",
+        "selectedColor": "#fff"
+      }
+    ]
+  }
+}

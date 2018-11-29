@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="container_bg">
+		<view class="sender" wx:for="{{myInfoBox}}" wx:key="{{index}}">
+			<view class="senderName flex_bt">
+				<text>头像</text>
+				<view>
+           <image class="content-top-img" src="{{item.avatar}}"></image>
+				</view>
+			</view>
+			<view class="senderStaticDiv flex_bt">
+				<text>昵称</text>
+        <input class="content-top-name" disabled="true" value="{{item.nickname}}" bindinput="senderName" type="text" name="input"></input>
+			</view>
+			<view class="senderStaticDiv selectAdd flex_bt">
+				<text>个性签名</text>
+        <input type='text' bindinput = "sendersignname" name="input" placeholder="个性签名" value='{{sendersignname}}'/>
+			</view>
+      <view class="senderStaticDiv selectAdd flex_bt">
+				<text>手机号码</text>
+        <input type='text' bindinput = "senderPhone" name="input" placeholder="未绑定" value='{{senderPhone}}'/>
+			</view>
+      <view class="senderStaticDiv selectAdd flex_bt">
+				<text>真实姓名</text>
+        <input type='text' bindinput = "sendernamess" name="input" placeholder="未绑定" value="{{sendernamess}}"/>
+			</view>
+		</view>
+	</view>
+  <view class="address_btn">
+    <button class="btn_color" bindtap="saveBtn">保存</button>
+  </view>
+</view>

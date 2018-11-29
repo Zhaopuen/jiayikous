@@ -1,0 +1,391 @@
+@import"../../wxParse/wxParse.wxss";
+.container{
+  width: 100%;
+  height: 100%;
+  background: #F9F9F9;
+}
+.bidHeader{
+  width: 88%;
+  height: 100rpx;
+  margin: 0 6%;
+  align-items: center;
+}
+.bidHeader>text{
+  color: #81D8CF;
+}
+.bidHeader_txt{
+  font-size: 0.9em;
+}
+.bidHeader_txt text:nth-child(2){
+  color: #F30B00;
+}
+.bidImg{
+  width: 100%;
+  height: 320rpx;
+  position: relative;
+}
+.bidImg>image{
+  width: 100%;
+  height: 100%;
+}
+.bidImg_sc{
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+}
+.bidImg_sc>image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.bidImg_jp{
+  position: absolute;
+  top: 0;
+  left: 30rpx;
+}
+.bidImg_jp>image{
+  width: 50rpx;
+  height: 120rpx;
+}
+.bidImg_jp>text{
+  position: absolute;
+  font-size: 0.8em;
+  top: 0;
+  left: 0;
+  width: 50rpx;
+  height: 120rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.bidMoney{
+  width: 90%;
+  height: 150rpx;
+  background: #fff;
+  margin: 20rpx auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.bidMoney view{
+  width: 50%;
+  font-size: 0.8em;
+   color: #81D8CF;
+}
+.bidMoney>view text:nth-child(1){
+  display: inline-block;
+  border: 1px solid #81D8CF;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+/* 竞购列表 */
+.bidList{
+  width: 92%;
+  margin: 0 4%;
+  min-height: 100rpx;
+  background: #fff;
+}
+.bidList_top{
+  width: 100%;
+  height: 80rpx;
+  background: #81D8CF;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 0.8em;
+  color: #fff;
+  border-radius: 10rpx 10rpx 0 0; 
+}
+.bidList_top text:nth-child(4){
+  visibility: hidden;
+}
+/* 列表 */
+.bidList_list{
+  width: 95%;
+  padding: 20rpx;
+}
+.bidList_Img{
+  position: relative;
+}
+.bidList_left{
+  align-items: center;
+  width: 70%;
+}
+.bidList_left image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.bidList_Img>text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  line-height: 50rpx;
+  color: #fff;
+  font-size: 0.8em;
+}
+.bidList_info{
+  width: 50%;
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.bidList_info image{
+  border-radius: 50%;
+}
+.bidList_info text{
+  display: inline-block;
+  width:60%; 
+  margin-left: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.8em;
+}
+.bidListMoney{
+  font-size: 0.80em;
+  color: #F30B00;
+}
+.bidList_right{
+  font-size: 0.85rem;
+  width: 150rpx;
+  height: 60rpx;
+  background: #81D8CF;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  color: #fff;
+}
+
+/* 弹窗 */
+/* 加一口弹窗 */
+.bidListmask{
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.6);
+  position:fixed;
+  transition: width 1s;
+  z-index: 999999;
+}
+.bidListmaskmid{
+  width:100%;
+  height:540rpx;
+  background: #fff;
+  position:fixed;
+  bottom:0;
+}
+.bidListtutle{
+  font-size:34rpx;
+  color:#000;
+  text-align: center;
+  line-height: 90rpx;
+  font-weight:bold;
+}
+.bidListtutle span{
+  color:#F30B00;
+}
+.bidListling{
+  text-align: center;
+  line-height:60rpx;
+}
+.bidListclose image{
+  width:50rpx;
+  height:50rpx;
+  position:absolute;
+  right:20rpx;
+  top:10rpx;
+}
+.bidListling span{
+  font-size:32rpx;
+}
+.bidListling text{
+  color:#911114;
+  font-size:32rpx;
+  font-weight: bold;
+}
+.bidListagree{
+  font-size:0.7em;
+  color:#c7c7c7;
+  line-height:60rpx;
+  text-align: center;
+}
+.bidListButton button{
+  width:94%;
+  margin:3%;
+  background:#81D8CF;
+  border-color:#81D8CF;
+  color:#fff;
+}
+.bidListborder{
+  width:40%;
+  text-align: center;
+  border:1px solid #911114;
+  margin:3% auto;
+  border-radius:10rpx;
+  padding:2% 0;
+}
+.bidListborder text:nth-child(1){
+  color:#911114;
+  font-size:34rpx;
+  line-height:55rpx;
+  display:block;
+  font-weight:bold;
+}
+.bidListborder text:nth-child(2){
+  color:#c7c7c7;
+  font-size:30rpx;
+}
+
+/* 商品列表 */
+.mall_listbox{
+  width:100%;
+  height:auto;
+  overflow: hidden;
+  /* margin-top:20rpx; */
+}
+.mall_list{
+  width:94%;
+  height:auto;
+  overflow: hidden;
+  margin:3%;
+  border-radius:10rpx;
+  background:#fff;
+}
+.mall_list .mall_list_mallimg{
+  width:100%;
+  height:300rpx;
+  position: relative;
+}
+.bidMoney{
+  width: 90%;
+  height: 150rpx;
+  background: #fff;
+  margin: 20rpx auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.bidMoney view{
+  width: 50%;
+  font-size: 0.8em;
+  color: #000;
+}
+.bidMoney>view text:nth-child(1){
+  display: inline-block;
+  border: 1px solid #81D8CF;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  color:#81D8CF;
+}
+.mall_list_title{
+  position:absolute;
+  z-index:9999;
+  bottom:20rpx;
+  left:30rpx;
+}
+.mall_list_jingpaiimg{
+  position: absolute;
+  z-index:999;
+  top:0;
+  right:30rpx;
+  width:68rpx;
+  height:170rpx;
+}
+.mall_list_jingpai{
+  position: absolute;
+  z-index:999999;
+  color:#fff;
+  top:0;
+  padding:15rpx;
+  text-align: center;
+  font-size:32rpx;
+}
+
+/* 产品详情弹窗 */
+.product_detail{
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.6);
+  position:fixed;
+  z-index:9999999;
+}
+.product_detailbox{
+  width:90%;
+  height:540rpx;
+  background: #fff;
+  position:absolute;
+  bottom:0;
+  top:0;
+  left:0;
+  right:0;
+  margin:auto;
+  border-radius:15rpx;
+}
+.product_detailTitle{
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  text-align: center;
+  font-size:30rpx;
+  color:#fff;
+  background: #81D8CF;
+  border-radius:15rpx 15rpx 0 0;
+}
+.product_detailcontent .product_detailctitle{
+  height:auto;
+  overflow: hidden;
+  width:100%;
+  font-size: 32rpx;
+  line-height:80rpx;
+  text-align: center;
+  display:block;
+}
+.product_content{
+  width:90%;
+  height:auto;
+  overflow: hidden;
+  padding:0 5% 4% 5%;
+}
+.product_content text{
+  display: block;
+  width:50%;
+  font-size:30rpx;
+  color:#333;
+  line-height:60rpx;
+  float:left;
+}
+.product_close image{
+  width:50rpx;
+  height:50rpx;
+  position:absolute;
+  right:20rpx;
+  top:20rpx;
+}
+.product_contentbox{
+  width:90%;
+  height:auto;
+  overflow: hidden;
+  padding:0 5% 4% 5%;
+}
+.product_contentbox text{
+  font-size:30rpx;
+  color:#333;
+  line-height:60rpx;
+}
+/* 背景颜色 */
+.mall_list_title{
+  background: rgba(255,255,255,0.3);
+  border-radius: 15rpx;
+}

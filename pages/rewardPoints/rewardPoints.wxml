@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="home">
+    <image src="../../img/beijing.png" class="home-bg"></image>
+    <view class='rewardPoint'>
+      <text>{{ rewardPoint }}</text>
+    </view>
+  </view>
+  <view class='rewardContent'>
+    <view class='rewardList flex_bt' wx:for="{{getMoney}}" wx:key="{{ index }}">
+        <view class='rewardLeft'>
+           <image src="{{item.ionc}}"></image>
+           <view class='rewardTitle'>
+            <text>{{ item.title }}</text>
+            <text>{{ item.time }}</text>
+           </view>
+        </view>
+        <text class='rewardMoney'>{{ item.money }}</text>
+    </view>
+  </view>
+</view>

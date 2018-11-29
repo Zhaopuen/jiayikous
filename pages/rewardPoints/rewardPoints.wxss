@@ -1,0 +1,67 @@
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.home{
+    width: 100%;
+    height: 500rpx;
+    overflow: hidden;
+    position: relative;
+}
+.home-bg{
+    width: 100%;
+    height: 300rpx;
+    display: block;
+}
+/* 积分 */
+.rewardPoint{
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.rewardPoint text{
+  width: 100%;
+  line-height:200rpx;
+  text-align: center;
+  display: inline-block;
+  color:#fff;
+  font-size: 1.6em; 
+}
+/* 列表 */
+.rewardContent{
+  width: 100%;
+  height: auto;
+  margin-top: -190rpx;
+  z-index: 999;
+}
+.rewardList{
+  padding: 20rpx;
+  align-items: center;
+}
+.rewardLeft{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.rewardLeft image{
+  width: 70rpx;
+  height: 70rpx;
+   margin-right: 20rpx; 
+}
+.rewardTitle{
+  display: flex;
+  flex-direction: column;
+}
+.rewardTitle text:nth-child(1){
+  font-size: 0.9em;
+}
+.rewardTitle text:nth-child(2){
+  font-size: 0.8em;
+  color: #9B9B9B;
+}
+.rewardMoney{
+  color: #F10C3B;
+}

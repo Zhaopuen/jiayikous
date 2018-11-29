@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="home">
+    <image src="../../img/homeBg.png" class="home-bg"></image>
+    <view class='rewardPoint'>
+      <text>￥{{ rewardPoint }}</text>
+      <text>我的余额</text>
+    </view>
+    <view class='cash'>
+      <navigator open-type="navigate" hover-class="none" url = "../recharge/recharge?money={{ rewardPoint }}">
+        <image src='../../img/dfk.png'></image>
+        <text>充值</text>
+      </navigator>
+      <navigator open-type="navigate" hover-class="none" url = "../withdrawCash/withdrawCash?money={{ rewardPoint }}">
+        <image src='../../img/dfh.png'></image>
+        <text>提现</text>
+      </navigator>
+    </view>
+  </view>
+  <view class='blank'>账单记录</view>
+  <view class='rewardContent'>
+  <view class='rewardList flex_bt' wx:for="{{getMoney}}" wx:key="{{ index }}">
+        <view class='rewardLeft'>
+           <image src="{{item.ionc}}"></image>
+           <view class='rewardTitle'>
+            <text>{{ item.title }}</text>
+            <text>{{ item.time }}</text>
+           </view>
+        </view>
+        <text style='color:{{item.style}}'>{{ item.money }}</text>
+    </view>
+  </view>
+</view>

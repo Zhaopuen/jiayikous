@@ -1,0 +1,18 @@
+<view class="container bidding_record">
+  <view class='rewardContent'>
+    <view class='rewardList flex_bt' wx:for="{{getMoney}}" wx:key="{{ index }}">
+        <view class='rewardLeft'>
+           <image src="{{item.ionc}}" ></image>
+           <view class='rewardTitle'>
+            <text style='color:{{ item.titleStyle  }}'>{{ item.title }}</text>
+            <text>{{ item.time }}</text>
+           </view>
+        </view>
+        <view class="reword_middle">
+          <text style='color:{{ item.priceStyle  }}'>{{item.price}}</text>
+          <text>{{item.shouyi}}</text>
+        </view>
+        <text style='color:{{item.style}};font-size:0.7em;'>{{ item.money }}</text>
+    </view>
+  </view>
+</view>

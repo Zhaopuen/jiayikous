@@ -1,0 +1,7 @@
+<!--logs.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="guizebox">
+     <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>

@@ -1,0 +1,79 @@
+.userInfomation{
+  width:100%;
+  height:100%;
+  background:#f5f5f5;
+  position: fixed;
+}
+.user_confirm{
+  background:#81D8CF;
+  width:94%;
+  margin:3%;
+  color:#fff;
+  font-size: 34rpx;
+  height:90rpx;
+  line-height:90rpx;
+  text-align: center;
+  position:fixed;
+  bottom:3%;
+}
+.uerInfomation_box{
+  width:94%;
+  height:auto;
+  overflow: hidden;
+  margin:3%;
+  background:#fff;
+  border-radius:10rpx;
+}
+.userInfomation_avatar{
+  /* width:100%; */
+  height:100rpx;
+  line-height:100rpx;
+  border-bottom:1px solid #d9d9d9;
+  padding:0 25rpx;
+}
+.userInfomation_avatar span{
+  float:left;
+  font-size:30rpx;
+}
+.userInfomation_avatarright{
+  float:right;
+  font-size:30rpx;
+  width:30%;
+}
+.userInfomation_avatarright input{
+  display:inline-block;
+}
+.userInfomation_avatarright em{
+  color:#9C9C9C;
+  margin-right:20rpx;
+}
+.userInfomation_avatarright i{
+  color:#CDCDCD;
+  margin-right:20rpx;
+}
+.userInfomation_avatarright image{
+  width:20rpx;
+  height:36rpx;
+}
+.userinfo_imga{
+  width:40rpx !important;
+  height: 40rpx !important;
+  border-radius:50%;
+  margin-right:15rpx;
+  margin-top:30rpx;
+  display:block;
+  float:left;
+}
+.pay_paybutton button{
+  width:94%;
+  height:100rpx;
+  background:#81D8CF;
+  border-radius:50rpx;
+  color:#fff;
+  line-height:100rpx;
+  text-align: center;
+  margin:3%;
+  position:fixed;
+  bottom:3%;
+  border-color:#81D8CF;
+}

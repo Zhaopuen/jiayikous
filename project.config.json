@@ -1,0 +1,208 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.3",
+	"appid": "wx196dedb4eab17d35",
+	"projectname": "jingpai4",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 27,
+			"list": [
+				{
+					"id": -1,
+					"name": "logs",
+					"pathName": "pages/logs/logs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "address",
+					"pathName": "pages/address/address",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "addAddress",
+					"pathName": "pages/addAddress/addAddress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "rewardPoints",
+					"pathName": "pages/rewardPoints/rewardPoints",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "rewardPoints",
+					"pathName": "pages/rewardPoints/rewardPoints",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "recharge",
+					"pathName": "pages/recharge/recharge",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "withdrawCash",
+					"pathName": "pages/withdrawCash/withdrawCash",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "balance",
+					"pathName": "pages/balance/balance",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "getMoney",
+					"pathName": "pages/getMoney/getMoney",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "bslsnce",
+					"pathName": "pages/balance/balance",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "bidding",
+					"pathName": "pages/bidding/bidding",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "bidding",
+					"pathName": "pages/bidding/bidding",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "biddingrecord",
+					"pathName": "pages/biddingRecord/biddingRecord",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sort",
+					"pathName": "pages/sort/sort",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "rule",
+					"pathName": "pages/rule/rule",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "bid",
+					"pathName": "pages/bidding/bidding",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "chageaddress",
+					"pathName": "pages/changeAddress/changeAddress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "userinfo",
+					"pathName": "pages/userInfomation/userInfomation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "preview",
+					"pathName": "pages/preview/preview",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sortlist",
+					"pathName": "pages/sortList/sortList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shimingrenzhegn",
+					"pathName": "pages/rechargeRecord/rechargeRecord",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pay",
+					"pathName": "pages/pay/pay"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="container_bg">
+			<view class="senderStaticDiv selectAdd flex_bt">
+				<text>真实姓名</text>
+        <input type='text' bindinput = "trueName" name="input" placeholder="请输入真实姓名" value='{{trueName}}'/>
+			</view>
+      <view class="senderStaticDiv selectAdd flex_bt">
+				<text>身份证号</text>
+        <input type='text' bindinput = "id_card" name="input" placeholder="请输入身份证号" value='{{id_card}}'/>
+			</view>
+      <view class='pro_view'><text bindtap='agree_pro' style='background:{{ pro_bg }}'></text><text>我已阅读并同意加一口</text><text bindtap='toxy'>《用户协议与隐私政策》</text></view>
+      <view class="address_btn">
+        <button class="btn_color" style='background:{{bc_bg}}' bindtap="saveBtn">保存</button>
+      </view>
+      <view class='view_ts'>
+        <text>温馨提示：请正确填写您的姓名与身份证号,后续需要使用此信息进行验证</text>
+      </view>
+		</view>
+</view>

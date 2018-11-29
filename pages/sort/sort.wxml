@@ -1,0 +1,36 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class='sort_searchwrap'>
+    <view class='sort_search' bindtap='tosearch'>
+      <input type='text' name="input"  bindinput = "inputPassword" password="{{ password }}" focus="{{ focus }}" placeholder="搜索你要找的商品" value='{{ search }}'/>
+      <image src='../../img/search.png'></image>
+    </view>
+  </view>
+  <view class='sort_content'>
+      <view class='sort_left'>
+        <scroll-view class="cat-list" scrollY="true" style="height: 100%;width: 204rpx">
+          <view bindtap="catItemClick" data-id="{{ item.id }}" class="cat-item {{item.active?'active':''}} flex-y-center flex-x-center" data-index="{{index}}" wx:for="{{cat_list}}" wx:key="{{inedx}}">
+            <view class="cat-name">{{item.name}}</view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class='sort_right'>
+        <!-- 轮播 -->
+        <view class='banner_list' wx:if="{{ lunboshow }}">
+          <swiper autoplay="true" circular="true" class="banner" duration="300" indicatorDots="true" interval="5000">
+            <swiper-item wx:for="{{lunbo}}" wx:key="{{index}}">
+              <navigator url="../sortList/sortList?id={{item.id}}">
+                  <image class="slide-image" mode="aspectFill" src="{{item.pic_url}}"></image>
+                </navigator>
+              </swiper-item>
+            </swiper>
+        </view>
+          <view class="classify">
+             <navigator class="classify_box" wx:for="{{classList}}" wx:key="{{index}}" url="../sortList/sortList?id={{ item.id }}">
+                <image src="http://jingpai.fengsh.cn/{{item.pic}}"></image>
+                <text>{{item.name}}</text>
+            </navigator>
+          </view>
+      </view>
+  </view>
+</view>

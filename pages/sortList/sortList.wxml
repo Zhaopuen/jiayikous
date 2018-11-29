@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container indexmall">
+  <!-- 搜索框 -->
+    <view class='index_search'>
+       <input type='text' name="input"  bindinput = "inputserch" password="{{ password }}" focus="{{ focus }}" placeholder="在万千藏品中搜素" value='{{ search }}'/>
+       <image src='../../img/search.png' bindtap='search'></image>
+    </view>
+    <view class='nullshow' wx:if="{{ nullShow }}">
+      <image src='../../img/searchnull.png'></image>
+      <text>没有找到你想要的东西</text>
+    </view>
+    <!-- 商品列表 -->
+    <view class="mall_listbox" wx:if="{{ !nullShow }}">
+      <view class="mall_list" bindtap='toDetail' wx:for="{{ goods_list }}" wx:key="{{ index }}" data-id='{{ item.id }}'>
+        <image src="{{item.src}}" class="mall_list_mallimg">
+          <view class="mall_list_title">{{ item.title }}</view>
+          <image src="../../img/jinpaizhong.png" class="mall_list_jingpaiimg">
+             <view class="mall_list_jingpai">{{ item.status }}</view>
+          </image>
+          <!-- <view class="mall_collection"></view> -->
+        </image>
+        
+        <view class='bidMoney'>
+          <view>
+            <text>起</text>
+            <text>起购价:</text>
+            <text style='color:#F30B00'>￥{{ item.basicMoney }}</text>
+          </view>
+          <view>
+            <text>加</text>
+            <text>加一口:</text>
+            <text>￥{{ item.addMoney }}</text>
+          </view>
+          <view>
+            <text>定</text>
+            <text>市场价:</text>
+            <text>￥{{ item.marketMoney }}</text>
+          </view>
+          <view>
+            <text>奖</text>
+            <text>分佣金:</text>
+            <text>￥{{ item.brokerageMoney }}</text>
+          </view>
+        </view>
+        <view class="daojishi">
+           <image src="../../img/shijian.png"></image>
+           <text>{{item.startTime}}-{{item.endTime}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
